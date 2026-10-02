@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    max-width: 142rem;
+    margin: 0 auto;
+}
+
+.grid{
+    display: grid;
+}
+
+.grid-center{
+    place-items: center;
+}
+
+.grid-cols-two{
+    grid-template-columns: repeat(2,1fr);
+}
+.grid-cols-three{
+    grid-template-columns: repeat(3,1fr);
+}
+.grid-cols-four{
+    grid-template-columns: repeat(4,1fr);
+}
+
+.music-container{
+    /* background-color: salmon; */
+}
+
+.music-some-icons{
+    padding: 2rem;
+    gap: 4rem;
+    font-size: 1.5rem;
+}
+
+
+.album-art-container{
+    & img{
+        width: 30rem;
+        height: auto;
+        border-radius: 2rem;
+    }
+}
+
+.song-name{
+    margin-top: 2rem;
+    & p{
+        font-size: 2.5rem;
+    }
+}
+
+.song-artist{
+    /* margin-top: 2rem; */
+    & p{
+        font-size: 1.5rem;
+    }
+}
+
+
+
+.music-icons{
+    /* background-color: red; */
+}
+
+.music-icons-two{
+    margin-top: 2rem;
+    width: 50%;
+    font-size: 2rem;
+}
+
+.seeker{
+    margin-top: 2rem;
+    /* background-color: blue; */
+    padding: 2rem;
+}
+
+.seek-container{
+    width: 50%;
+    & input{
+        width: 100%;
+    }
+
+    & input::-webkit-slider-runnable-track{
+        /* background-color: red; */
+    }
+}
+
+
+.music-buttons{
+    gap: 10rem;
+    font-size: 2rem;
+}
