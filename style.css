@@ -1,102 +1,178 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-
-html{
-    font-size: 62.5%;
-    font-family: Arial, Helvetica, sans-serif;
+html {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
-    max-width: 142rem;
-    margin: 0 auto;
+.container {
+  max-width: 142rem;
+  margin: 0 auto;
 }
 
-.grid{
-    display: grid;
+.grid {
+  display: grid;
 }
 
-.grid-center{
-    place-items: center;
+.grid-center {
+  place-items: center;
 }
 
-.grid-cols-two{
-    grid-template-columns: repeat(2,1fr);
+.grid-cols-two {
+  grid-template-columns: repeat(2, 1fr);
 }
-.grid-cols-three{
-    grid-template-columns: repeat(3,1fr);
+.grid-cols-three {
+  grid-template-columns: repeat(3, 1fr);
 }
-.grid-cols-four{
-    grid-template-columns: repeat(4,1fr);
-}
-
-.music-container{
-    /* background-color: salmon; */
+.grid-cols-four {
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.music-some-icons{
-    padding: 2rem;
-    gap: 4rem;
+.music-container {
+  /* background-color: salmon; */
+}
+
+.music-some-icons {
+  padding: 2rem;
+  gap: 4rem;
+  font-size: 1.5rem;
+}
+
+.album-art-container {
+  & img {
+    width: 30rem;
+    height: auto;
+    border-radius: 2rem;
+  }
+}
+
+.song-name {
+  margin-top: 2rem;
+  & p {
+    font-size: 2.5rem;
+  }
+}
+
+.song-artist {
+  /* margin-top: 2rem; */
+  & p {
     font-size: 1.5rem;
+  }
 }
 
-
-.album-art-container{
-    & img{
-        width: 30rem;
-        height: auto;
-        border-radius: 2rem;
-    }
+.music-icons {
+  /* background-color: red; */
 }
 
-.song-name{
-    margin-top: 2rem;
-    & p{
-        font-size: 2.5rem;
-    }
+.music-icons-two {
+  margin-top: 2rem;
+  width: 50%;
+  font-size: 2rem;
 }
 
-.song-artist{
-    /* margin-top: 2rem; */
-    & p{
-        font-size: 1.5rem;
-    }
+.seeker {
+  margin-top: 2rem;
+  /* background-color: blue; */
+  padding: 2rem;
 }
 
+.seek-container {
+  width: 50%;
+  & input {
+    width: 100%;
+  }
 
-
-.music-icons{
+  & input::-webkit-slider-runnable-track {
     /* background-color: red; */
+  }
 }
 
-.music-icons-two{
-    margin-top: 2rem;
-    width: 50%;
-    font-size: 2rem;
+.music-buttons {
+  gap: 10rem;
+  font-size: 2rem;
+  /* margin-top: 2rem; */
+  padding-block: 2rem;
 }
 
-.seeker{
-    margin-top: 2rem;
-    /* background-color: blue; */
-    padding: 2rem;
+.main-music-container {
+  background-color: rgba(145, 145, 145, 0.158);
+  position: absolute;
+  width: 100%;
+  z-index: 1;
 }
 
-.seek-container{
-    width: 50%;
-    & input{
-        width: 100%;
+.main-container {
+  position: relative;
+  /* background-color: red; */
+  width: 100%;
+  height: 100vh;
+    overflow: hidden;
+}
+/* 
+.ball-container{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: blue;
+    overflow: hidden;
+    height: 100rem;
+} */
+
+
+.ball{
+    width: 50rem;
+    aspect-ratio: 1;
+    background-color: red;
+    border-radius: 100rem;
+    background: radial-gradient(circle, #ff6b6b, #f7b731);
+    filter: blur(5rem);
+    box-shadow: 0 0 30px rgba(247, 183, 49, 0.4);
+}
+
+.ball-one{
+    animation-name: ball-one;
+    animation-timing-function: ease-in-out;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    position: absolute;
+    left: 0;
+}
+.ball-two{
+    animation-name: ball-two;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    position: absolute;
+    right: 0;
+}
+
+
+@keyframes ball-one {
+    from{
+        top: 50rem;
+        left: 0rem;
     }
-
-    & input::-webkit-slider-runnable-track{
-        /* background-color: red; */
+    to{
+        top: 20rem;
+        left: 30rem;
     }
 }
 
-
-.music-buttons{
-    gap: 10rem;
-    font-size: 2rem;
+@keyframes ball-two {
+    from{
+        top: 50rem;
+        right: 0rem;
+    }
+    to{
+        top: 20rem;
+        right: 30rem;
+    }
 }
