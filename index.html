@@ -17,7 +17,7 @@
     <section class="main-container container">
       <div class="ball-one ball"></div>
       <div class="ball-two ball"></div>
-      <div class="main-music-container container">
+      <div class="main-music-container container ani">
         <div class="music-container grid grid-cols-two grid-center">
           <div><i class="fa-solid fa-chevron-down"></i></div>
           <div class="music-some-icons grid grid-cols-four">
@@ -31,7 +31,7 @@
         <div class="album-art-container grid grid-center">
           <div class="album-art-img">
             <img
-              src="/html__css_js/music-player/giphy.gif"
+              src="https://images.unsplash.com/photo-1723924995430-b74c76bbcdfd?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Album art"
               class="album-art"
             />
@@ -39,10 +39,10 @@
             <!-- <img src="/music-player/" alt=""> -->
           </div>
           <div class="song-name">
-            <p>Hamesha Tumko Chaha</p>
+            <p class="name">Song name</p>
           </div>
           <div class="song-artist">
-            <p>Kavita Krishnamurthy,Udit Narayan</p>
+            <!-- <p>Kavita Krishnamurthy,Udit Narayan</p> -->
           </div>
         </div>
 
@@ -62,9 +62,9 @@
 
         <div class="music-buttons-container grid grid-center">
           <div class="music-buttons grid grid-cols-three">
-            <div><i class="fa-solid fa-backward-fast"></i></div>
+            <div><i class="fa-solid fa-backward-fast previous"></i></div>
             <div><i class="fa-solid fa-play play"></i></div>
-            <div><i class="fa-solid fa-forward-fast"></i></div>
+            <div><i class="fa-solid fa-forward-fast next"></i></div>
           </div>
         </div>
       </div>
@@ -72,7 +72,8 @@
       <input
         type="file"
         class="file"
-        style="position: absolute; left: 1rem; top: 20rem; z-index: +2"
+        accept="audio/mpeg"
+        style="position: absolute; left: 1rem; bottom: 0rem; z-index: +2"
       />
       <audio controls class="audio" style="display: none"></audio>
       <!-- END AUDIO -->
