@@ -15,8 +15,8 @@
   </head>
   <body>
     <section class="main-container container">
-        <div class="ball-one ball"></div>
-        <div class="ball-two ball"></div>
+      <div class="ball-one ball"></div>
+      <div class="ball-two ball"></div>
       <div class="main-music-container container">
         <div class="music-container grid grid-cols-two grid-center">
           <div><i class="fa-solid fa-chevron-down"></i></div>
@@ -31,9 +31,12 @@
         <div class="album-art-container grid grid-center">
           <div class="album-art-img">
             <img
-              src="https://images.unsplash.com/photo-1584679109597-c656b19974c9?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="/html__css_js/music-player/giphy.gif"
               alt="Album art"
+              class="album-art"
             />
+            <!-- <video src="/html__css_js/music-player/giphy.gif"></video> -->
+            <!-- <img src="/music-player/" alt=""> -->
           </div>
           <div class="song-name">
             <p>Hamesha Tumko Chaha</p>
@@ -53,7 +56,7 @@
 
         <div class="seeker grid grid-center">
           <div class="seek-container grid grid-center">
-            <input type="range" name="" id="" value="0" />
+            <input type="range" name="" id="" value="0" class="seeker" />
           </div>
         </div>
 
@@ -66,12 +69,21 @@
         </div>
       </div>
       <!-- START AUDIO -->
-       <input type="file" class="file" style="position: absolute; left: 1rem; top: 20rem; z-index: +2;">
-       <audio controls class="audio" style="display: none;"></audio>
+      <input
+        type="file"
+        class="file"
+        style="position: absolute; left: 1rem; top: 20rem; z-index: +2"
+      />
+      <audio controls class="audio" style="display: none"></audio>
       <!-- END AUDIO -->
     </section>
 
-
     <script src="script.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"
+      integrity="sha512-YsR46MmyChktsyMMou+Bs74oCa/CDdwft7rJ5wlnmDzMj1mzqncsfJamEEf99Nk7IB0JpTMo5hS8rxB49FUktQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </body>
 </html>
