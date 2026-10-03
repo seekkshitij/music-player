@@ -60,12 +60,17 @@
         <div class="music-buttons-container grid grid-center">
           <div class="music-buttons grid grid-cols-three">
             <div><i class="fa-solid fa-backward-fast"></i></div>
-            <div><i class="fa-solid fa-play"></i></div>
+            <div><i class="fa-solid fa-play play"></i></div>
             <div><i class="fa-solid fa-forward-fast"></i></div>
           </div>
         </div>
       </div>
+      <!-- START AUDIO -->
+       <input type="file" class="file" style="position: absolute; left: 1rem; top: 20rem; z-index: +2;">
+       <audio controls class="audio" style="display: none;"></audio>
+      <!-- END AUDIO -->
     </section>
+
 
     <script src="script.js"></script>
   </body>
