@@ -7,13 +7,13 @@ file.addEventListener("change", function (e) {
   console.log(music)
   if (e.target.files[0].type !== "audio/mpeg") {
     alert("Please select mp3 files only !!!")
-  };
-  const musicUrl = URL.createObjectURL(music);
-  musicList.push({ url: musicUrl, name: music.name });
+};
+const musicUrl = URL.createObjectURL(music);
+musicList.push({ url: musicUrl, name: music.name });
 });
 
 const play = document.querySelector(".play");
-const seek = document.querySelector(".seeker");
+const seek = document.querySelector(".seek-time");
 const name = document.querySelector(".name");
 const albumArt = document.querySelector(".album-art");
 const previous = document.querySelector(".previous");
@@ -31,15 +31,16 @@ play.addEventListener("click", function () {
     albumArt.src = "/html__css_js/music-player/giphy.gif";
     audio.play();
     playCount++;
+    audio.addEventListener("timeupdate",function(){
+        seek.max = Math.floor(audio.duration);
+        seek.value = Math.floor(audio.currentTime);
+    })
 } else {
     albumArt.src =
-      "https://images.unsplash.com/photo-1723924995430-b74c76bbcdfd?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+    "https://images.unsplash.com/photo-1723924995430-b74c76bbcdfd?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
     audio.pause();
     playCount = 0;
-  }
-  setInterval(() => {
-    seek.value = Math.floor(audio.currentTime) * 1000;
-  }, 100);
+}
 });
 
 // PREVIOUS LOGIC
